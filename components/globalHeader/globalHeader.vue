@@ -14,7 +14,7 @@
 .topHead {
     width: 100%;
     height: 40px;
-    color: #ffffff;
+    color: $white;
     background-color: #999999;
     display: flex;
     align-items: center;
@@ -26,7 +26,7 @@
 
         .href {
             font-size: 12px;
-            border: solid 1px #ffffff;
+            border: solid 1px $white;
             padding: 3px 12px;
             border-radius: 17px;
             cursor: pointer;

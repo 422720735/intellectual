@@ -1,5 +1,8 @@
 <template>
-    <div class="min_title" :class="isBold && 'is-bold'">
+    <div
+        class="min_title"
+        :class="[isBold && 'is-bold', borderBottom && 'borderBottom']"
+    >
         <div class="left">
             <div class="inlineBlock one"></div>
             <div class="inlineBlock two" v-if="subTitle">{{ subTitle }}</div>
@@ -22,18 +25,26 @@ export default {
             default() {
                 return false
             }
+        },
+        borderBottom: {
+            type: Boolean,
+            default() {
+                return true
+            }
         }
     }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .min_title {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 12px;
-    border-bottom: solid 1px #cdcbce;
+    &.borderBottom {
+        padding-bottom: 12px;
+        border-bottom: solid 1px #cdcbce;
+    }
     > div.left {
         font-size: 18px;
         font-weight: bold;
@@ -44,7 +55,7 @@ export default {
             width: 6px;
             height: 18px;
             vertical-align: middle;
-            background-color: #1990ea;
+            background-color: $primaryColor;
         }
 
         > div.two {

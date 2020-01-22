@@ -2,7 +2,7 @@
     <div class="platLayouts">
         <div class="platTitle">
             <h1 class="title">{{ mainTitle || '' }}</h1>
-            <a class="more" @click="more">
+            <a class="more" @click="more" v-if="moreTitle">
                 {{ moreTitle || '' }}
                 <i class="el-icon-d-arrow-right"></i>
             </a>
@@ -46,7 +46,7 @@ export default {
             right: 0;
             transform: translateY(50%);
             cursor: pointer;
-            color: #347ce1;
+            color: $primaryColor;
         }
     }
 }

@@ -20,8 +20,8 @@
 .logNav {
     width: 100%;
     height: 80px;
-    background-color: #2f7deb;
-    color: #ffffff;
+    background-color: $primaryColor;
+    color: $white;
     font-size: 18px;
 
     > div {
@@ -32,7 +32,7 @@
 
         .log {
             float: left;
-            color: #ffffff;
+            color: $white;
             font-size: 30px;
             font-weight: 700;
         }
@@ -50,11 +50,11 @@
                 }
 
                 a {
-                    color: #ffffff;
+                    color: $white;
                     text-decoration: none;
                     font-size: 14px;
                     &:hover {
-                        color: #ffffff;
+                        color: $white;
                     }
                 }
             }

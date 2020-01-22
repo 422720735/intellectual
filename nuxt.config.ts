@@ -27,7 +27,14 @@ module.exports = {
      ** Global CSS
      */
     css: [
-        'element-ui/lib/theme-chalk/index.css',
+        // 'element-ui/lib/theme-chalk/index.css',
+        'element-ui/lib/theme-chalk/icon.css',
+        'element-ui/lib/theme-chalk/input.css',
+        'element-ui/lib/theme-chalk/select.css',
+        'element-ui/lib/theme-chalk/option.css',
+        'element-ui/lib/theme-chalk/button.css',
+        'element-ui/lib/theme-chalk/tooltip.css',
+        'ant-design-vue/lib/input-number/style/index.css',
         {
             src: 'assets/css/base.css'
         }
@@ -35,7 +42,7 @@ module.exports = {
     /*
      ** Plugins to load before mounting the App
      */
-    plugins: ['@/plugins/element-ui'],
+    plugins: ['@/plugins/element-ui', '@/plugins/antd'],
     /*
      ** Nuxt.js dev-modules
      */
@@ -89,6 +96,9 @@ module.exports = {
                     )
                 }
             }
+        },
+        styleResources: {
+            scss: './assets/css/front.scss'
         }
     }
 }

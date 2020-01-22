@@ -1,12 +1,17 @@
 <template>
     <div class="arrow-btn" :style="styles">
-        <!--
-
-                 visibility: hidden;
-        visibility: visible;
-                -->
-        <div class="prev" v-if="prev" @click="handleLeft" :style="{ visibility: `${prevHidden ? 'visible' : 'hidden'}` }"></div>
-        <div class="next" v-if="next" @click="handleRight" :style="{ visibility: `${nextHidden ? 'visible' : 'hidden'}` }"></div>
+        <div
+            class="prev"
+            v-if="prev"
+            @click="handleLeft"
+            :style="{ visibility: `${prevHidden ? 'visible' : 'hidden'}` }"
+        ></div>
+        <div
+            class="next"
+            v-if="next"
+            @click="handleRight"
+            :style="{ visibility: `${nextHidden ? 'visible' : 'hidden'}` }"
+        ></div>
     </div>
 </template>
 
@@ -101,7 +106,7 @@ export default {
         &:hover {
             &::before,
             &::after {
-                background: #1990ea;
+                background: $primaryColor;
             }
             &::before {
                 transform: translateX(-50%) rotate(45deg);
