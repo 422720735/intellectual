@@ -1,0 +1,12 @@
+{
+    "proseWrap": "preserve",
+    "ignorePath": ".prettierignore",
+    "htmlWhitespaceSensitivity": "ignore",
+    "printWidth": 175,
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "bracketSpacing": true
+}

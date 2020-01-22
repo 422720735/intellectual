@@ -1,13 +1,11 @@
 <template>
-    $END$
+    <div>productList</div>
 </template>
 
 <script>
-  export default {
+export default {
     name: 'productList'
-  }
+}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
