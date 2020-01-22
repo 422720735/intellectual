@@ -20,8 +20,8 @@
                 <div class="clear">
                     <img class="fl" src="~/static/images/information1.png" />
                     <div class="fl">
-                        <h4>RayBaaS区块链平台技术支持</h4>
-                        <h6>企业资料，申贷文件实时上链，数据不可篡改，信息追踪溯源</h6>
+                        <h4>政府基金保障</h4>
+                        <h6>成都市知识产权运营基金6000万，促进知识产权运营体系建设</h6>
                     </div>
                 </div>
             </li>
@@ -52,7 +52,12 @@
                     <GlobalPrevNext next @right="changeRight" :next-hidden="visible_next" />
                 </div>
             </div>
-            <div class="product-details">详情</div>
+            <div class="product-details">
+                <div class="details">
+                    <div class="triangle_1"></div>
+                    <div class="triangle_2"></div>
+                </div>
+            </div>
         </plat-layouts>
     </div>
 </template>
@@ -350,6 +355,16 @@ body {
                     height: 68px;
                     margin-right: 20px;
                 }
+                h4 {
+                    margin-top: 4px;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                h6 {
+                    margin-top: 4px;
+                    font-size: 14px;
+                    color: #777478;
+                }
             }
             &:first-child > div {
                 &:after {
@@ -359,7 +374,7 @@ body {
                     width: 4px;
                     height: 56px;
                     background-color: #cfcccf;
-                    margin-left: 36px;
+                    margin-left: 85px;
                 }
             }
         }
@@ -373,7 +388,6 @@ body {
             overflow: hidden;
         }
         .productContent {
-            /*width: 2021px;*/
             transition: all 0.3s;
             > li {
                 float: left;
@@ -400,6 +414,7 @@ body {
                     }
 
                     .modified {
+                        font-weight: bold;
                         color: #dad7db;
                     }
 
@@ -459,13 +474,38 @@ body {
         z-index: 120;
         bottom: -330px;
         position: absolute;
-        background-color: red;
+        background-color: #ffffff;
         margin: 0 auto;
         width: 1200px;
         min-height: 300px;
-        overflow: hidden;
         border-radius: 24px;
         border: solid 1px #cdcbce;
+
+        .details {
+            position: relative;
+            .triangle_1 {
+                content: '';
+                display: block;
+                width: 0;
+                height: 0;
+                top: -20px;
+                border-width: 0 15px 17px;
+                border-style: solid;
+                border-color: transparent transparent #cdcbce;
+                position: absolute;
+            }
+            .triangle_2 {
+                /*content: '';
+                display: block;
+                width: 0;
+                height: 0;
+                top: -18px;
+                border-width: 0 15px 17px;
+                border-style: solid;
+                border-color: transparent transparent #ffffff;
+                position: absolute;*/
+            }
+        }
     }
 }
 

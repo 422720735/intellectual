@@ -71,9 +71,10 @@ export default {
     > .prev,
     > .next {
         position: relative;
+        margin: 10% 0 0 10%;
         width: 80%;
         height: 80%;
-        margin: 10% 0 0 10%;
+        cursor: pointer;
         &::before {
             content: ' ';
             position: absolute;
