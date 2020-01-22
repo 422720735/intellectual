@@ -49,7 +49,7 @@ module.exports = {
         'no-unneeded-ternary': 'error', // 禁止不必要的嵌套 var isYes = answer === 1 ? true : false;
         'no-func-assign': 'error', //禁止重复的函数声明
         'object-shorthand': 'error', // 强制对象字面量缩写语法
-        'max-len': ['error', { code: 80 }], // 单行最大长度80
+        'max-len': ['warn', { code: 80 }], // 单行最大长度80
         'object-curly-spacing': ['error', 'always', { arraysInObjects: true }], // {a,b,c} 必须有空格
         'space-infix-ops': ['error', { int32Hint: false }], // 选项设置为true（默认为false）以允许a|0无空格写入。
         'key-spacing': ['error', { beforeColon: false, afterColon: true }], // 对象字面量中冒号的前后空格

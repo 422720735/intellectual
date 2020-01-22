@@ -82,6 +82,26 @@
                         :next-hidden="visible_next"
                     />
                 </div>
+                <div
+                    class="already"
+                    id="live"
+                    style="height: 196px;overflow: hidden"
+                >
+                    <ul class="listOne">
+                        <li v-for="(data, k) in financial" :key="k">
+                            <div>
+                                <span>{{ data.name | mask }}</span>
+                                <span>资本：{{ data.money }}万</span>
+                                <span>员工：{{ data.person }}人</span>
+                                <span>金融产品：{{ data.product }}</span>
+                                <span style="text-align: right">
+                                    放款：{{ data.explain }}万
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="listTwo"></ul>
+                </div>
             </div>
             <div class="product-details" :class="hoverVisible && 'active'">
                 <div class="details">
@@ -251,22 +271,6 @@
                 </ul>
             </div>
         </plat-layouts>
-        <div class="already" id="live" style="height: 196px;overflow: hidden">
-            <ul class="listOne">
-                <li v-for="(data, k) in financial" :key="k">
-                    <div>
-                        <span>{{ data.name | mask }}</span>
-                        <span>资本：{{ data.money }}万</span>
-                        <span>员工：{{ data.person }}人</span>
-                        <span>金融产品：{{ data.product }}</span>
-                        <span style="text-align: right">
-                            放款：{{ data.explain }}万
-                        </span>
-                    </div>
-                </li>
-            </ul>
-            <ul class="listTwo"></ul>
-        </div>
         <footer-layout />
     </div>
 </template>
@@ -513,7 +517,10 @@ export default {
             if (this.productList.length >= this.slidesPerView) {
                 let total = 0
                 const width = 385
-                this.productList.map(_ => (total += width + 24))
+                this.productList.map(_ => {
+                    total += width
+                    total += 24
+                })
                 total -= 24
                 return total + 'px'
             } else {
@@ -539,6 +546,7 @@ export default {
 
         let MyMar = setInterval(Marquee, speed)
         box.onmouseover = () => {
+            console.log(12)
             clearInterval(MyMar)
         }
         box.onmouseout = () => {
@@ -572,6 +580,15 @@ export default {
                 this.offsetX -= 409
                 this.currentIndex += 1
             }
+        }
+    },
+    filters: {
+        mask(val) {
+            return (
+                val.substring(0, 2) +
+                '**********' +
+                val.substring(val.length - 2)
+            )
         }
     },
     components: {
@@ -651,11 +668,10 @@ body {
             overflow: hidden;
         }
         .productContent {
-            background-color: red;
-            height: 483px;
             transition: all 0.3s;
             > li {
                 float: left;
+                box-sizing: border-box;
                 width: 385px;
                 margin: 0 12px;
                 padding: 20px;
@@ -730,6 +746,65 @@ body {
         }
         .carousel-btn-next {
             right: -50px;
+        }
+
+        .already {
+            margin-top: 20px;
+            > ul {
+                padding: 20px 20px;
+                background-color: $white;
+                border-radius: 13px;
+
+                &:last-child {
+                    margin-top: -20px;
+                }
+
+                li {
+                    margin-bottom: 20px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+
+                    > div {
+                        display: flex;
+                        margin-bottom: 10px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        width: 1160px;
+                        overflow: hidden;
+
+                        span {
+                            display: block;
+                            font-weight: bold;
+                            font-size: 16px;
+
+                            &:nth-of-type(1) {
+                                width: 20%;
+                            }
+
+                            &:nth-of-type(2) {
+                                width: 20%;
+                            }
+
+                            &:nth-of-type(3) {
+                                width: 20%;
+                            }
+
+                            &:nth-of-type(4) {
+                                width: 20%;
+                            }
+
+                            &:nth-of-type(5) {
+                                width: 20%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     .platLayouts {
@@ -938,65 +1013,6 @@ body {
             li {
                 width: 450px;
                 margin: 23px 75px 23px 0;
-            }
-        }
-    }
-
-    .already {
-        margin-top: 20px;
-        > ul {
-            padding: 20px 20px;
-            background-color: $white;
-            border-radius: 13px;
-
-            &:last-child {
-                margin-top: -20px;
-            }
-
-            li {
-                margin-bottom: 20px;
-
-                &:last-child {
-                    margin-bottom: 0;
-                }
-
-                > div {
-                    display: flex;
-                    margin-bottom: 10px;
-
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-
-                    width: 1160px;
-                    overflow: hidden;
-
-                    span {
-                        display: block;
-                        font-weight: bold;
-                        font-size: 16px;
-
-                        &:nth-of-type(1) {
-                            width: 20%;
-                        }
-
-                        &:nth-of-type(2) {
-                            width: 20%;
-                        }
-
-                        &:nth-of-type(3) {
-                            width: 20%;
-                        }
-
-                        &:nth-of-type(4) {
-                            width: 20%;
-                        }
-
-                        &:nth-of-type(5) {
-                            width: 20%;
-                        }
-                    }
-                }
             }
         }
     }
