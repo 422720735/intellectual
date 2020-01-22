@@ -31,6 +31,7 @@
             </li>
         </ul>
         <plat-layouts
+            class="platLayoutsOne"
             main-title="热门金融产品"
             more-title="更多金融产品"
             @click="$router.push({ name: 'product' })"
@@ -45,7 +46,7 @@
                 </div>
                 <div class="swiper">
                     <ul
-                        class="productContent clear"
+                        class="productContent"
                         :style="{
                             transform: `translateX(${offsetX}px)`,
                             width: `${totalWidth}`
@@ -131,7 +132,11 @@
                 <img src="~/static/images/tree.png" />
             </div>
         </div>
-        <plat-layouts main-title="平台资讯" more-title="更多平台资讯">
+        <plat-layouts
+            class="platLayoutsTwo"
+            main-title="平台资讯"
+            more-title="更多平台资讯"
+        >
             <div class="newsBox">
                 <div class="left" @click="$router.push({ name: 'newsInfo_4' })">
                     <img src="~/static/images/special/b.jpeg" />
@@ -601,9 +606,12 @@ export default {
 <style lang="scss" scoped>
 body {
     background-color: #fbf8f9;
+    /*background-color: red;*/
 }
 .home {
     min-width: 1556px;
+    /*background-color: red;*/
+    background-color: #fbf8f9;
     .carousel {
         width: 100%;
         max-width: 100%;
@@ -661,18 +669,18 @@ body {
         width: 1200px;
         .swiper {
             width: 1200px;
-            overflow: hidden;
+            overflow-x: hidden;
         }
         .productContent {
+            display: flex;
             transition: all 0.3s;
             > li {
-                float: left;
-                box-sizing: border-box;
-                width: 385px;
-                margin: 0 12px;
+                width: 345px;
+                margin: 12px 12px;
                 padding: 20px;
                 border-radius: 4px;
                 background-color: $white;
+                /*box-shadow: 0 2px 12px 0 red;*/
                 box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
                 &:first-child {
                     margin-left: 0;
@@ -744,9 +752,12 @@ body {
             right: -50px;
         }
     }
-    .platLayouts {
+    .platLayoutsOne {
         position: relative;
         margin-top: 40px;
+    }
+    .platLayoutsTwo {
+        margin-top: 70px;
     }
     .product-details {
         position: absolute;
@@ -755,7 +766,7 @@ body {
         margin: 0 auto;
         width: 1200px;
         padding: 20px 43px;
-        border-radius: 9px;
+        border-radius: 11px;
         background-color: $white;
         border: solid 1px #cdcbce;
         transition: opacity 0.3s, visibility 0.3s;
@@ -817,7 +828,7 @@ body {
         width: 100%;
         text-align: center;
         min-width: 1556px;
-        margin-top: 70px;
+        margin-top: 32px;
         height: 467px;
         background-image: url('~static/images/process.png');
         background-repeat: no-repeat;
@@ -912,7 +923,7 @@ body {
     .moneyOrg {
         width: 1200px;
         margin-top: 40px;
-        border-radius: 16px;
+        border-radius: 11px;
         box-shadow: 4px 4px 10px #efeff0;
         background-color: $white;
         background-image: url('~static/images/money.png');
@@ -935,7 +946,7 @@ body {
         width: 1200px;
         margin-top: 30px;
         margin-bottom: 30px;
-        border-radius: 16px;
+        border-radius: 11px;
         box-shadow: 4px 4px 10px #efeff0;
         background-color: $white;
         background-image: url('~static/images/assess.png');
@@ -955,11 +966,11 @@ body {
     }
 
     .already {
-        margin-top: 100px;
+        margin-top: 20px;
         > ul {
             padding: 20px 20px;
             background-color: $white;
-            border-radius: 13px;
+            border-radius: 11px;
 
             &:last-child {
                 margin-top: -20px;
