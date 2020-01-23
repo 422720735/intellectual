@@ -1,3 +1,15 @@
 import Vue from 'vue'
-import { InputNumber } from 'ant-design-vue'
+import {
+    InputNumber,
+    Tabs,
+    Card,
+    Pagination,
+    LocaleProvider
+} from 'ant-design-vue'
+const TabPane = Tabs.TabPane
+Vue.use(Card)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Pagination)
 Vue.use(InputNumber)
+Vue.use(LocaleProvider)

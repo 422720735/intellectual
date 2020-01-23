@@ -1,5 +1,5 @@
 <template>
-    <div class="home">
+    <div id="home">
         <global-header />
         <login-nav />
         <!--轮播-->
@@ -30,12 +30,10 @@
                 </div>
             </li>
         </ul>
-        <plat-layouts
-            class="platLayoutsOne"
-            main-title="热门金融产品"
-            more-title="更多金融产品"
-            @click="$router.push({ name: 'product' })"
-        >
+        <plat-layouts class="platLayoutsOne" main-title="热门金融产品">
+            <nuxt-link slot="extra" :to="{ name: 'product' }">
+                更多金融产品
+            </nuxt-link>
             <div class="productList">
                 <div class="carousel-btn-prev">
                     <GlobalPrevNext
@@ -56,7 +54,6 @@
                             v-for="(item, i) in productList"
                             :key="i"
                             @mouseenter="handleDetails(i)"
-                            @mouseleave="handleDetails(i)"
                         >
                             <sub-title
                                 :sub-title="item.name"
@@ -104,7 +101,11 @@
                 </ul>
                 <ul class="listTwo"></ul>
             </div>
-            <div class="product-details" :class="hoverVisible && 'active'">
+            <div
+                class="product-details"
+                :class="hoverVisible && 'active'"
+                @mouseleave="handleHidden"
+            >
                 <div class="details">
                     <div class="triangle_1" :class="detailsArrow"></div>
                     <div class="triangle_2" :class="detailsArrow"></div>
@@ -122,6 +123,16 @@
                                 <p>{{ items }}</p>
                             </li>
                         </ul>
+                        <div class="handle-btn">
+                            <el-button
+                                round
+                                size="small"
+                                type="primary"
+                                @click="$router.push({ name: 'applyFor' })"
+                            >
+                                我要申请
+                            </el-button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -135,11 +146,10 @@
                 />
             </div>
         </div>
-        <plat-layouts
-            class="platLayoutsTwo"
-            main-title="平台资讯"
-            more-title="更多平台资讯"
-        >
+        <plat-layouts class="platLayoutsTwo" main-title="平台资讯">
+            <nuxt-link slot="extra" :to="{ name: 'information' }">
+                更多平台资讯
+            </nuxt-link>
             <div class="newsBox">
                 <div class="left" @click="$router.push({ name: 'newsInfo_4' })">
                     <img
@@ -621,7 +631,10 @@ export default {
                 this.detailsArrow = 'leftLayout'
             else if (this.currentIndex + 1 === index)
                 this.detailsArrow = 'rightLayout'
-            this.hoverVisible = !this.hoverVisible
+            this.hoverVisible = true
+        },
+        handleHidden() {
+            this.hoverVisible = false
         },
         changeLeft() {
             if (this.currentIndex > 1) {
@@ -662,12 +675,15 @@ export default {
 <style lang="scss" scoped>
 $primaryColor: #2f7deb;
 $white: #ffffff;
+$mainBgColor: #f9f9f9;
+$subColor: #666666;
+$warningColor: #f58b3b;
 body {
-    background-color: #fbf8f9;
+    background-color: $mainBgColor;
 }
-.home {
+#home {
     min-width: 1556px;
-    background-color: #fbf8f9;
+    background-color: $mainBgColor;
     .carousel {
         width: 100%;
         max-width: 100%;
@@ -733,8 +749,7 @@ body {
             display: flex;
             transition: all 0.3s;
             > li {
-                width: 345px;
-                margin: 12px 12px;
+                width: 385px;
                 margin: 12px 12px;
                 padding: 20px;
                 border-radius: 4px;
@@ -751,7 +766,7 @@ body {
                     margin-top: 100px;
 
                     .money {
-                        color: #fe683a;
+                        color: $warningColor;
                         font-size: 40px;
                         font-weight: bold;
                         margin-bottom: 10px;
@@ -873,13 +888,20 @@ body {
             .min_title {
                 margin-bottom: 17px;
             }
-            p {
+            .min_title + ul {
                 font-size: 16px;
-                color: #757475;
-                margin-bottom: 20px;
-                &:last-child {
-                    margin-bottom: 0;
+                color: $subColor;
+                li {
+                    margin-bottom: 20px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
                 }
+            }
+            .handle-btn {
+                display: flex;
+                justify-content: center;
+                margin: 23px 0 17px;
             }
         }
     }

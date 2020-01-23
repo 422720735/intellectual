@@ -2,10 +2,14 @@
     <div class="platLayouts">
         <div class="platTitle">
             <h1 class="title">{{ mainTitle || '' }}</h1>
-            <a class="more" @click="more" v-if="moreTitle">
+            <a class="more" @click="more" v-if="moreTitle && !$slots.extra">
                 {{ moreTitle || '' }}
-                <i class="el-icon-d-arrow-right"></i>
+                <i v-if="moreIcon" class="el-icon-d-arrow-right"></i>
             </a>
+            <span class="more more-slot" v-if="$slots.extra">
+                <slot name="extra">{{ moreTitle || '' }}</slot>
+                <i v-if="moreIcon" class="el-icon-d-arrow-right"></i>
+            </span>
         </div>
         <slot></slot>
     </div>
@@ -19,6 +23,12 @@ export default {
         },
         moreTitle: {
             type: String
+        },
+        moreIcon: {
+            type: Boolean,
+            default() {
+                return true
+            }
         }
     },
     methods: {
@@ -49,6 +59,10 @@ $white: #ffffff;
             transform: translateY(50%);
             cursor: pointer;
             color: $primaryColor;
+            &.more-slot {
+                display: flex;
+                align-items: center;
+            }
         }
     }
 }

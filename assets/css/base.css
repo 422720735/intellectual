@@ -73,6 +73,12 @@ var,
 i {
     font-style: normal;
 }
+
+html,
+body {
+    height: 100% !important;
+}
+
 body {
     font-size: 16px;
     line-height: 1.5;
@@ -150,4 +156,10 @@ ol {
 
 .block {
     display: block;
+}
+
+#__nuxt,
+#__layout {
+    min-height: 100%;
+    background-color: #f9f9f9;
 }

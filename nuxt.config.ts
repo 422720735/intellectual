@@ -34,7 +34,11 @@ module.exports = {
         'element-ui/lib/theme-chalk/option.css',
         'element-ui/lib/theme-chalk/button.css',
         'element-ui/lib/theme-chalk/tooltip.css',
-        'ant-design-vue/lib/input-number/style/index.css',
+        // ant
+        'ant-design-vue/dist/antd.css',
+        // 'ant-design-vue/lib/tabs/style/index.css',
+        // 'ant-design-vue/lib/pagination/style/index.css',
+        // 'ant-design-vue/lib/input-number/style/index.css',
         {
             src: 'assets/css/base.css'
         }

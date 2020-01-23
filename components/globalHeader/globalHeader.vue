@@ -10,7 +10,7 @@
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $primaryColor: #2f7deb;
 $white: #ffffff;
 .topHead {

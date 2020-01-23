@@ -8,6 +8,7 @@
             <div class="inlineBlock two" v-if="subTitle">{{ subTitle }}</div>
         </div>
         <div class="right" v-if="moreTitle">{{ moreTitle }}</div>
+        <slot name="extra"></slot>
     </div>
 </template>
 
@@ -36,9 +37,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $primaryColor: #2f7deb;
 $white: #ffffff;
+$mainColor2: #1a1a1a;
 .min_title {
     display: flex;
     align-items: center;
@@ -67,6 +69,7 @@ $white: #ffffff;
             line-height: 18px;
             margin-left: 10px;
             font-weight: bold;
+            color: $mainColor2;
         }
     }
     > div.right {
