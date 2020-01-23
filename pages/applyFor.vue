@@ -11,7 +11,7 @@
             </h4>
             <h4 class="max-money">
                 最高
-                <span>1000</span>
+                <span>{{ 958 | moneyUnit }}</span>
                 万
             </h4>
             <h4 class="interest">
@@ -113,6 +113,11 @@ export default {
             loading: false
         }
     },
+    filters: {
+        moneyUnit(value) {
+            return Number(value).toFixed(2)
+        }
+    },
     components: {
         GlobalHeader,
         MapContent,
@@ -130,6 +135,7 @@ $mainColor2: #1a1a1a;
 $subColor: #666666;
 $warningColor: #f58b3b;
 #applyFor {
+    margin-bottom: 50px;
     > .applyHead {
         margin: 12px auto;
         padding: 20px;
