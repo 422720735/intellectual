@@ -44,6 +44,8 @@
 </template>
 
 <script>
+// import { InputNumber } from 'ant-design-vue'
+// import { Button, Select, Option, Input } from 'element-ui'
 import GlobalHeader from '~/components/globalHeader/globalHeader.vue'
 import LoginNav from '~/components/loginNav/loginNav.vue'
 import 'ant-design-vue/lib/input-number/style/index.css'
@@ -81,6 +83,11 @@ export default {
         }
     },
     components: {
+        // AInputNumber: InputNumber,
+        // ElButton: Button,
+        // ElSelect: Select,
+        // ElOption: Option,
+        // ElInput: Input,
         GlobalHeader,
         LoginNav
     }

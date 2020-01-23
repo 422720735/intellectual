@@ -16,7 +16,10 @@
                 </li>
             </ul>
             <div>
-                <img src="~/static/images/QrCode.png" alt="" />
+                <img
+                    v-if="require(`~/static/images/QrCode.png`)"
+                    v-lazy="require(`~/static/images/QrCode.png`)"
+                />
                 <div style="text-align: center;margin-top: 10px">
                     扫码关注迅鳐公众号
                 </div>

@@ -42,7 +42,10 @@ module.exports = {
     /*
      ** Plugins to load before mounting the App
      */
-    plugins: ['@/plugins/element-ui', '@/plugins/antd'],
+    plugins: [
+        { src: '@/plugins/element-ui', ssr: true },
+        { src: '@/plugins/ant-design-vue', ssr: true }
+    ],
     /*
      ** Nuxt.js dev-modules
      */
@@ -66,7 +69,7 @@ module.exports = {
      ** Build configuration
      */
     build: {
-        transpile: [/^element-ui/],
+        transpile: [/^element-ui/, /^ant-design-vue/],
         /*
          ** You can extend webpack config here
          */
@@ -97,5 +100,8 @@ module.exports = {
                 }
             }
         }
+    },
+    render: {
+        resourceHints: false
     }
 }

@@ -129,7 +129,10 @@
         <div class="process">
             <div>
                 <h1>融资流程</h1>
-                <img src="~/static/images/tree.png" />
+                <img
+                    v-if="require(`~/static/images/tree.png`)"
+                    v-lazy="require(`~/static/images/tree.png`)"
+                />
             </div>
         </div>
         <plat-layouts
@@ -139,7 +142,10 @@
         >
             <div class="newsBox">
                 <div class="left" @click="$router.push({ name: 'newsInfo_4' })">
-                    <img src="~/static/images/special/b.jpeg" />
+                    <img
+                        v-if="require(`~/static/images/special/b.jpeg`)"
+                        v-lazy="require(`~/static/images/special/b.jpeg`)"
+                    />
                 </div>
                 <ul class="right">
                     <li @click="$router.push({ name: 'newsInfo_5' })">
@@ -150,7 +156,14 @@
                             <span>2019-12-05</span>
                         </div>
                         <div class="content">
-                            <img src="~/static/images/special/5_1.jpg" />
+                            <img
+                                v-if="
+                                    require(`~/static/images/special/5_1.jpg`)
+                                "
+                                v-lazy="
+                                    require(`~/static/images/special/5_1.jpg`)
+                                "
+                            />
                             <p>
                                 12月2-4日，“2019成都国际数字版权交易博览会”在蓉举行，同期举办了由世界知识产权组织、国家版权局主办的“‘一带一路’版权国际论坛”。
                             </p>
@@ -162,7 +175,12 @@
                             <span>2019-12-04</span>
                         </div>
                         <div class="content">
-                            <img src="~/static/images/special/1.jpg" />
+                            <img
+                                v-if="require(`~/static/images/special/1.jpg`)"
+                                v-lazy="
+                                    require(`~/static/images/special/1.jpg`)
+                                "
+                            />
                             <p>
                                 成都市知识产权运营基金由成都市财政出资，委托专业投资管理机构按照市场化方式运营的知识产权运营母基金
                             </p>
@@ -176,7 +194,14 @@
                             <span>2019-06-12</span>
                         </div>
                         <div class="content">
-                            <img src="~/static/images/special/2_1.png" />
+                            <img
+                                v-if="
+                                    require(`~/static/images/special/2_1.png`)
+                                "
+                                v-lazy="
+                                    require(`~/static/images/special/2_1.png`)
+                                "
+                            />
                             <p>
                                 6月12日，“2019成都国际知识产权行业峰会”在成都市武侯区举行，来自美国、日本等国家的法律界人士、知识产权领域专家，和国内知名的新经济企业代表、知识产权领域的学者、投资人、协会代表参会，了解彼此的建设成果，沟通前沿的建设经验。
                             </p>
@@ -191,7 +216,12 @@
                             <span>2018-01-25</span>
                         </div>
                         <div class="content">
-                            <img src="~/static/images/special/3.jpg" />
+                            <img
+                                v-if="require(`~/static/images/special/3.jpg`)"
+                                v-lazy="
+                                    require(`~/static/images/special/3.jpg`)
+                                "
+                            />
                             <p>
                                 当前，知识产权竞争已成为比产品竞争、品牌竞争层次更深、技术水平更高的竞争。
                                 成都高新区正深入实施知识产权战略和标准化战略，助力企业融入全球价值链。
@@ -210,38 +240,51 @@
             <div class="moneyOrg">
                 <ul class="list">
                     <li>
-                        <img src="~/static/images/bank1.png" alt="成都银行" />
+                        <img
+                            v-if="require(`~/static/images/bank1.png`)"
+                            v-lazy="require(`~/static/images/bank1.png`)"
+                            alt="成都银行"
+                        />
                     </li>
                     <li>
                         <img
-                            src="~/static/images/bank2.png"
+                            v-if="require(`~/static/images/bank2.png`)"
+                            v-lazy="require(`~/static/images/bank2.png`)"
                             alt="成都农商银行"
                         />
                     </li>
                     <li>
                         <img
-                            src="~/static/images/bank3.png"
+                            v-if="require(`~/static/images/bank3.png`)"
+                            v-lazy="require(`~/static/images/bank3.png`)"
                             alt="成都工商银行"
                         />
                     </li>
                     <li>
-                        <img src="~/static/images/bank4.png" alt="华夏银行" />
+                        <img
+                            v-if="require(`~/static/images/bank4.png`)"
+                            v-lazy="require(`~/static/images/bank4.png`)"
+                            alt="华夏银行"
+                        />
                     </li>
                     <li>
                         <img
-                            src="~/static/images/bank5.png"
+                            v-if="require(`~/static/images/bank5.png`)"
+                            v-lazy="require(`~/static/images/bank5.png`)"
                             alt="中国建设银行"
                         />
                     </li>
                     <li>
                         <img
-                            src="~/static/images/bank6.png"
+                            v-if="require(`~/static/images/bank6.png`)"
+                            v-lazy="require(`~/static/images/bank6.png`)"
                             alt="中国农业银行"
                         />
                     </li>
                     <li>
                         <img
-                            src="~/static/images/bank7.png"
+                            v-if="require(`~/static/images/bank7.png`)"
+                            v-lazy="require(`~/static/images/bank7.png`)"
                             alt="中国民生银行"
                         />
                     </li>
@@ -251,25 +294,37 @@
                 <ul class="list">
                     <li>
                         <img
-                            src="~/static/images/institutions1.png"
+                            v-if="require(`~/static/images/institutions1.png`)"
+                            v-lazy="
+                                require(`~/static/images/institutions1.png`)
+                            "
                             alt="北京中金浩资产评估有限责任公司"
                         />
                     </li>
                     <li>
                         <img
-                            src="~/static/images/institutions5.png"
+                            v-if="require(`~/static/images/institutions5.png`)"
+                            v-lazy="
+                                require(`~/static/images/institutions5.png`)
+                            "
                             alt="四川恒通房地产土地评估事务所有限公司"
                         />
                     </li>
                     <li>
                         <img
-                            src="~/static/images/institutions6.png"
+                            v-if="require(`~/static/images/institutions6.png`)"
+                            v-lazy="
+                                require(`~/static/images/institutions6.png`)
+                            "
                             alt="四川恒通房地产土地评估事务所有限公司"
                         />
                     </li>
                     <li>
                         <img
-                            src="~/static/images/institutions7.png"
+                            v-if="require(`~/static/images/institutions7.png`)"
+                            v-lazy="
+                                require(`~/static/images/institutions7.png`)
+                            "
                             alt="四川恒通房地产土地评估事务所有限公司"
                         />
                     </li>
@@ -287,6 +342,7 @@ import PlatLayouts from '~/layouts/platLayouts/platLayouts.vue'
 import SubTitle from '~/components/subTitle/subTitle.vue'
 import GlobalPrevNext from '~/components/globalPrevNext/globalPrevNext.vue'
 import FooterLayout from '~/layouts/footerLayout/footerLayout.vue'
+
 export default {
     data() {
         return {
@@ -677,8 +733,8 @@ body {
             display: flex;
             transition: all 0.3s;
             > li {
-                width: 385px;
-                box-sizing: border-box;
+                width: 345px;
+                margin: 12px 12px;
                 margin: 12px 12px;
                 padding: 20px;
                 border-radius: 4px;
@@ -765,9 +821,9 @@ body {
         position: absolute;
         z-index: 120;
         top: 590px;
-        box-sizing: border-box;
         margin: 0 auto;
         width: 1200px;
+        box-sizing: border-box;
         padding: 20px 43px;
         border-radius: 11px;
         background-color: $white;
@@ -787,7 +843,7 @@ body {
                 width: 0;
                 height: 0;
                 top: -31px;
-                border-width: 0 9px 10px;
+                border-width: 0 10px 10px;
                 border-style: solid;
                 border-color: transparent transparent #cdcbce;
                 position: absolute;
@@ -798,17 +854,17 @@ body {
                 width: 0;
                 height: 0;
                 top: -30px;
-                border-width: 0 9px 10px;
+                border-width: 0 10px 10px;
                 border-style: solid;
                 border-color: transparent transparent $white;
                 position: absolute;
                 vertical-align: middle;
             }
             .leftLayout {
-                left: 207px;
+                left: 182px;
             }
             .middleLayout {
-                left: 585px;
+                left: 575px;
             }
             .rightLayout {
                 left: 993px;
