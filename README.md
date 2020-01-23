@@ -22,3 +22,9 @@ $ npm run generate
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
 # intellectual
+
+(Vue.js 简约但功能强大的包装器，可完美显示滚动条)[https://mercs600.github.io/vue2-perfect-scrollbar/]
+
+```
+npm install vue2-perfect-scrollbar
+```

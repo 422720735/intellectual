@@ -47,6 +47,8 @@ module.exports = {
      ** Plugins to load before mounting the App
      */
     plugins: [
+        // '@/plugins/perfect-scrollbar',
+        '@/plugins/vue-perfect-scrollbar',
         { src: '@/plugins/element-ui', ssr: true },
         { src: '@/plugins/ant-design-vue', ssr: true }
     ],
