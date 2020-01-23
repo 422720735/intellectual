@@ -54,7 +54,8 @@ $subColor: #666666;
             margin: 0 auto;
             width: 450px;
             .title {
-                border-bottom: solid 1px $subColor;
+                padding: 20px;
+                border-bottom: solid 1px #cacdcc;
             }
 
             .contentList {
@@ -87,6 +88,14 @@ $subColor: #666666;
                     bottom: 22px;
                     z-index: 99;
                     width: 100%;
+                    /*
+                    background-image: linear-gradient(
+                        -180deg,
+                        rgba(255, 255, 255, 0) 0%,
+                        #fff 70%
+                    );
+                    */
+
                     background: linear-gradient(
                         to top,
                         #fff,
