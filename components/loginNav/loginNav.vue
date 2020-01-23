@@ -7,7 +7,7 @@
                     <nuxt-link :to="{ name: 'index' }">首页</nuxt-link>
                 </li>
                 <li>
-                    <nuxt-link :to="{ name: 'login' }">金融产品</nuxt-link>
+                    <nuxt-link :to="{ name: 'product' }">金融产品</nuxt-link>
                 </li>
                 <li>
                     <nuxt-link :to="{ name: 'login' }">平台资讯</nuxt-link>

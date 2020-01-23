@@ -608,11 +608,9 @@ $primaryColor: #2f7deb;
 $white: #ffffff;
 body {
     background-color: #fbf8f9;
-    /*background-color: red;*/
 }
 .home {
     min-width: 1556px;
-    /*background-color: red;*/
     background-color: #fbf8f9;
     .carousel {
         width: 100%;
@@ -628,6 +626,7 @@ body {
         justify-content: space-between;
         padding: 0 58px;
         width: 1200px;
+        box-sizing: border-box;
         height: 114px;
         margin: 0 auto;
         border-radius: 94px;
@@ -669,6 +668,7 @@ body {
         position: relative;
         z-index: 99;
         width: 1200px;
+        box-sizing: border-box;
         .swiper {
             width: 1200px;
             overflow-x: hidden;
@@ -677,12 +677,12 @@ body {
             display: flex;
             transition: all 0.3s;
             > li {
-                width: 345px;
+                width: 385px;
+                box-sizing: border-box;
                 margin: 12px 12px;
                 padding: 20px;
                 border-radius: 4px;
                 background-color: $white;
-                /*box-shadow: 0 2px 12px 0 red;*/
                 box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
                 &:first-child {
                     margin-left: 0;
@@ -764,7 +764,8 @@ body {
     .product-details {
         position: absolute;
         z-index: 120;
-        top: 580px;
+        top: 590px;
+        box-sizing: border-box;
         margin: 0 auto;
         width: 1200px;
         padding: 20px 43px;
