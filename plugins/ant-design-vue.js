@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import {
-    InputNumber,
     Tabs,
     Card,
     Pagination,
+    InputNumber,
     LocaleProvider
 } from 'ant-design-vue'
 const TabPane = Tabs.TabPane

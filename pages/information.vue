@@ -304,9 +304,9 @@ $warningColor: #f58b3b;
                     width: 100%;
                     box-sizing: border-box;
                     padding: 20px;
-                    border-radius: 4px;
+                    border-radius: 11px;
                     background-color: $white;
-                    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+                    border: solid 1px #d5d6d6;
                     margin-bottom: 10px;
 
                     .word_bg {
