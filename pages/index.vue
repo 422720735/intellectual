@@ -604,6 +604,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$primaryColor: #2f7deb;
+$white: #ffffff;
 body {
     background-color: #fbf8f9;
     /*background-color: red;*/

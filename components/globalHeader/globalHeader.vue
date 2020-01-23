@@ -11,6 +11,8 @@
 </template>
 
 <style lang="scss" scoped>
+$primaryColor: #2f7deb;
+$white: #ffffff;
 .topHead {
     width: 100%;
     height: 40px;

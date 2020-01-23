@@ -17,6 +17,8 @@
     </div>
 </template>
 <style lang="scss" scoped>
+$primaryColor: #2f7deb;
+$white: #ffffff;
 .logNav {
     width: 100%;
     height: 80px;

@@ -30,6 +30,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$primaryColor: #2f7deb;
+$white: #ffffff;
 .platLayouts {
     width: 1200px;
     margin: 0 auto;

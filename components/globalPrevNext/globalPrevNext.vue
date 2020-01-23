@@ -70,6 +70,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$primaryColor: #2f7deb;
+$white: #ffffff;
 .arrow-btn {
     width: 50px;
     height: 50px;

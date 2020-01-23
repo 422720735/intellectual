@@ -37,6 +37,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$primaryColor: #2f7deb;
+$white: #ffffff;
 .min_title {
     display: flex;
     align-items: center;

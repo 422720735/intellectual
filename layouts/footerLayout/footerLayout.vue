@@ -26,6 +26,8 @@
 </template>
 
 <style lang="scss" scoped>
+$primaryColor: #2f7deb;
+$white: #ffffff;
 .footer {
     width: 100%;
     margin-top: 64px;

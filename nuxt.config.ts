@@ -96,9 +96,6 @@ module.exports = {
                     )
                 }
             }
-        },
-        styleResources: {
-            scss: './assets/css/front.scss'
         }
     }
 }
