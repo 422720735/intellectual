@@ -693,6 +693,7 @@ body {
         }
     }
     .information {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -723,17 +724,17 @@ body {
                     color: #777478;
                 }
             }
-            &:first-child > div {
-                &:after {
-                    float: left;
-                    display: inline-block;
-                    content: '';
-                    width: 4px;
-                    height: 56px;
-                    background-color: #cfcccf;
-                    margin-left: 85px;
-                }
-            }
+        }
+        &:before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -28px 0 0 -2px;
+            display: block;
+            content: '';
+            width: 4px;
+            height: 56px;
+            background-color: #cfcccf;
         }
     }
     .productList {

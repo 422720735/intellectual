@@ -163,3 +163,7 @@ ol {
     min-height: 100%;
     background-color: #f9f9f9;
 }
+.flexAuto {
+    display: flex;
+    justify-content: center;
+}
