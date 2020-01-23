@@ -19,6 +19,10 @@
                 <span>8%-10%</span>
             </h4>
         </div>
+        <div class="accept">
+            <sub-title sub-title="请选择受理机构" :border-bottom="false" />
+            <map-content />
+        </div>
         <div class="news-product">
             <div class="news">
                 <sub-title sub-title="办理条件" :border-bottom="false" />
@@ -81,6 +85,7 @@
 
 <script>
 import GlobalHeader from '~/components/globalHeader/globalHeader.vue'
+import MapContent from '~/layouts/mapContent/mapContent.vue'
 import LoginNav from '~/components/loginNav/loginNav.vue'
 import SubTitle from '~/components/subTitle/subTitle.vue'
 export default {
@@ -110,6 +115,7 @@ export default {
     },
     components: {
         GlobalHeader,
+        MapContent,
         SubTitle,
         LoginNav
     }
@@ -157,6 +163,14 @@ $warningColor: #f58b3b;
                 color: $warningColor;
             }
         }
+    }
+    > .accept {
+        margin: 0 auto;
+        padding: 20px;
+        width: 1200px;
+        box-sizing: border-box;
+        border-radius: 11px;
+        background-color: $white;
     }
     > .news-product {
         display: flex;
