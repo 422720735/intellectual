@@ -29,17 +29,21 @@
                     </div>
                 </div>
             </li>
-            <li class="rightMap">right</li>
+            <li class="rightMap"><baidu-map /></li>
         </ul>
     </div>
 </template>
 
 <script>
+import BaiduMap from './baiduMap/baiduMap.vue'
 export default {
     data() {
         return {
             loading: false
         }
+    },
+    components: {
+        BaiduMap
     }
 }
 </script>
