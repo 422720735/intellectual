@@ -28,3 +28,5 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 ```
 npm install vue2-perfect-scrollbar
 ```
+
+(Vue2+vue-social-share 实现社交分享)[https://blog.csdn.net/b2894lxlx/article/details/80089111]

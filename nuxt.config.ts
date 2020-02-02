@@ -50,7 +50,6 @@ module.exports = {
         // '@/plugins/perfect-scrollbar',
         '@/plugins/vue-perfect-scrollbar',
         { src: '@/plugins/element-ui', ssr: true },
-        { src: '@/plugins/vue-baidu-map', ssr: true },
         { src: '@/plugins/ant-design-vue', ssr: true }
     ],
     /*

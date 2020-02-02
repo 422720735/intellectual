@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $primaryColor: #2f7deb;
 $white: #ffffff;
 .limit.ant-pagination {
@@ -35,9 +35,9 @@ $white: #ffffff;
     justify-content: flex-end;
     .ant-pagination-item-active {
         background-color: $primaryColor;
-
         > a {
             color: $white;
+            background-color: $primaryColor;
         }
     }
 }

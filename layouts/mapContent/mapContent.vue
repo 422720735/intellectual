@@ -113,6 +113,7 @@ $subColor: #666666;
         }
         .rightMap {
             flex: 1;
+            background-color: orangered;
         }
     }
 }
